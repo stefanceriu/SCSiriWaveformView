@@ -84,7 +84,20 @@
 		CGFloat progress = 1.0f - (CGFloat)i / self.numberOfWaves;
 		CGFloat normedAmplitude = (1.5f * progress - 0.5f) * self.amplitude;
 		
-        [[self.waveColor colorWithAlphaComponent:(progress / 3.0f * 2.0f) + (1.0f / 3.0f)] set];
+		// AdjustedAlphaCompent is a function of the progress and self.waveColor's alpha component
+		CGFloat adjustedAlphaComponent = ({
+			
+			CGFloat waveColorAlpha = ({
+				CGFloat alpha;
+				[self.waveColor getWhite:nil alpha:&alpha];
+				alpha;
+			});
+			CGFloat multiplier = MIN(1.0, (progress / 3.0f * 2.0f) + (1.0f / 3.0f));
+			
+			waveColorAlpha * multiplier;
+		});
+		
+        [[self.waveColor colorWithAlphaComponent:adjustedAlphaComponent] set];
 		
 		for(CGFloat x = 0; x<width + self.density; x += self.density) {
 			
