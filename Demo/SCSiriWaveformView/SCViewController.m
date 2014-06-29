@@ -41,6 +41,12 @@
         return;
     }
     
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+    
+    if (error) {
+        NSLog(@"Error setting category: %@", [error description]);
+    }
+    
     [self.recorder prepareToRecord];
     [self.recorder setMeteringEnabled:YES];
     [self.recorder record];
