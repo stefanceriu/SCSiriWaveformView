@@ -4,8 +4,6 @@ UIView subclass that reproduces the waveform effect seen in Siri on iOS 7.
 
 ##### Screenshots
 
-[![SCSiriWaveformView](https://dl.dropboxusercontent.com/u/12748201/SCSiriWaveformView/SCSiriWaveformView.png)](https://dl.dropboxusercontent.com/u/12748201/SCSiriWaveformView/SCSiriWaveformView.mp4)
-
 ![SCSiriWaveformView](https://dl.dropboxusercontent.com/u/12748201/SCSiriWaveformView/SCSiriWaveformView.gif)
 
 ### Usage
