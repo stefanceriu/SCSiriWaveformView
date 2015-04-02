@@ -9,7 +9,7 @@
 #import "SCSiriWaveformView.h"
 
 static const CGFloat kDefaultFrequency          = 1.5f;
-static const CGFloat kDefaultAplitude           = 1.0f;
+static const CGFloat kDefaultAmplitude          = 1.0f;
 static const CGFloat kDefaultIdleAmplitude      = 0.01f;
 static const CGFloat kDefaultNumberOfWaves      = 5.0f;
 static const CGFloat kDefaultPhaseShift         = -0.15f;
@@ -26,15 +26,6 @@ static const CGFloat kDefaultSecondaryLineWidth = 1.0f;
 
 @implementation SCSiriWaveformView
 
-- (instancetype)init
-{
-	if(self = [super init]) {
-		[self setup];
-	}
-	
-	return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
 	if (self = [super initWithFrame:frame]) {
@@ -44,11 +35,13 @@ static const CGFloat kDefaultSecondaryLineWidth = 1.0f;
 	return self;
 }
 
-- (void)awakeFromNib
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-	[super awakeFromNib];
+	if (self = [super initWithCoder:aDecoder]) {
+		[self setup];
+	}
 	
-	[self setup];
+	return self;
 }
 
 - (void)setup
@@ -57,7 +50,7 @@ static const CGFloat kDefaultSecondaryLineWidth = 1.0f;
 	
 	self.frequency = kDefaultFrequency;
 	
-	self.amplitude = kDefaultAplitude;
+	self.amplitude = kDefaultAmplitude;
 	self.idleAmplitude = kDefaultIdleAmplitude;
 	
 	self.numberOfWaves = kDefaultNumberOfWaves;
