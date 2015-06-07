@@ -17,6 +17,7 @@
 		186F7BB018FAEC6A00CCC606 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186F7BAF18FAEC6A00CCC606 /* AVFoundation.framework */; };
 		186F7BF618FAF5B500CCC606 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186F7BF518FAF5B500CCC606 /* Main_iPhone.storyboard */; };
 		186F7BFA18FAF77500CCC606 /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F7BF918FAF77500CCC606 /* SCSiriWaveformView.m */; };
+		18EF32411B2479B600204641 /* sample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 18EF32401B2479B600204641 /* sample.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		186F7BF518FAF5B500CCC606 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		186F7BF818FAF77500CCC606 /* SCSiriWaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSiriWaveformView.h; sourceTree = "<group>"; };
 		186F7BF918FAF77500CCC606 /* SCSiriWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSiriWaveformView.m; sourceTree = "<group>"; };
+		18EF32401B2479B600204641 /* sample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 		186F7B7E18FAEC1100CCC606 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				186F7B7F18FAEC1100CCC606 /* SCSiriWaveformView-Info.plist */,
 				186F7B8318FAEC1100CCC606 /* main.m */,
+				18EF32401B2479B600204641 /* sample.m4a */,
+				186F7B7F18FAEC1100CCC606 /* SCSiriWaveformView-Info.plist */,
 				186F7B8518FAEC1100CCC606 /* SCSiriWaveformView-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				186F7BF618FAF5B500CCC606 /* Main_iPhone.storyboard in Resources */,
+				18EF32411B2479B600204641 /* sample.m4a in Resources */,
 				186F7B8B18FAEC1100CCC606 /* Main_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
