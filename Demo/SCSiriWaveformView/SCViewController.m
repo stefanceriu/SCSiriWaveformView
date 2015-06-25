@@ -106,17 +106,28 @@ typedef NS_ENUM(NSUInteger, SCSiriWaveformViewInputType) {
 	switch (self.selectedInputType) {
 		case SCSiriWaveformViewInputTypeRecorder: {
 			[self.recorder updateMeters];
-			normalizedValue = pow (10, [self.recorder averagePowerForChannel:0] / 20);
+			normalizedValue = [self _normalizedPowerLevelFromDecibels:[self.recorder averagePowerForChannel:0]];
 			break;
 		}
 		case SCSiriWaveformViewInputTypePlayer: {
 			[self.player updateMeters];
-			normalizedValue = pow (10, [self.player averagePowerForChannel:0] / 20);
+			normalizedValue = [self _normalizedPowerLevelFromDecibels:[self.player averagePowerForChannel:0]];
 			break;
 		}
 	}
     
     [self.waveformView updateWithLevel:normalizedValue];
+}
+
+#pragma mark - Private
+
+- (CGFloat)_normalizedPowerLevelFromDecibels:(CGFloat)decibels
+{
+	if (decibels < -60.0f || decibels == 0.0f) {
+		return 0.0f;
+	}
+	
+	return powf((powf(10.0f, 0.05f * decibels) - powf(10.0f, 0.05f * -60.0f)) * (1.0f / (1.0f - powf(10.0f, 0.05f * -60.0f))), 1.0f / 2.0f);
 }
 
 @end
