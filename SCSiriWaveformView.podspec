@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SCSiriWaveformView'
-  s.version  = '1.0.3'
+  s.version  = '1.1.0'
   s.platform = :ios
   s.ios.deployment_target = '7.0'
 
@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source_files = 'SCSiriWaveformView/*'
   s.requires_arc = true
   s.frameworks = 'UIKit', 'QuartzCore', 'CoreGraphics', 'Foundation', 'AVFoundation'
-  s.screenshots = ["https://dl.dropboxusercontent.com/u/12748201/SCSiriWaveformView/SCSiriWaveformView.gif"]
+  s.screenshots = ["https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoSVloLXRKSC1DbEk"]
 end
