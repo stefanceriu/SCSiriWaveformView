@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SCSiriWaveformView'
-  s.version  = '1.1.0'
+  s.version  = '1.1.1'
   s.platform = :ios
   s.ios.deployment_target = '7.0'
 
