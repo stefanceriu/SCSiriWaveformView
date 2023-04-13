@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name     = 'SCSiriWaveformView'
-  s.version  = '1.1.1'
+  s.version  = '1.1.2'
   s.platform = :ios
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '11.0'
 
   s.summary  = 'UIView subclass that reproduces the waveform effect seen in Siri on iOS 7'
   s.homepage = 'https://github.com/stefanceriu/SCSiriWaveformView'
